@@ -1,0 +1,19 @@
+﻿slave_id,space,address,name,c_name,type,access,scale,unit,default,mirror_region,mirror_offset,description
+1,input,0x0000,设备状态,device_status,u16,R,1,,0,measurement,0,Slave1 设备状态
+1,input,0x0001,温度,temperature,i16,R,0.1,°C,0,measurement,1,温度 x10
+1,input,0x0002,压力,pressure,u16,R,0.01,kPa,0,measurement,2,压力 x100
+1,input,0x0003,报警状态,alarm_status,u16,R,1,,0,measurement,3,Slave1 报警状态
+1,holding,0x0010,采样周期,sample_period_ms,u16,RW,1,ms,200,control,0,默认 200ms
+1,holding,0x00F0,故障注入,fault_mode,u16,RW,1,,0,control,1,见 FaultMode
+2,input,0x0000,电压,voltage,u16,R,0.1,V,0,measurement,0,电压 x10
+2,input,0x0001,电流,current,u16,R,0.01,A,0,measurement,1,电流 x100
+2,input,0x0002,累计电量,energy,u32,R,1,,0,measurement,2,ABCD 高字在前 占 2 个寄存器
+2,holding,0x0010,清零命令,clear_command,u16,W,1,,0,control,0,写 1 清零 读返回 0
+2,holding,0x00F0,故障注入,fault_mode,u16,RW,1,,0,control,1,见 FaultMode
+3,input,0x0000,输出状态,output_status,u16,R,1,,0,measurement,0,Slave3 输出状态
+3,holding,0x0010,输出控制,output_control,u16,RW,1,,0,control,0,Slave3 输出控制
+3,holding,0x0011,目标值,target_value,u16,RW,1,,0,control,1,Slave3 目标值
+3,holding,0x00F0,故障注入,fault_mode,u16,RW,1,,0,control,2,见 FaultMode
+4,input,0x0000,运行计数,run_counter,u16,R,1,,0,stats,0,每 200ms +1
+4,holding,0x0010,测试写入值,test_value,u16,RW,1,,0,control,0,Slave4 测试写入
+4,holding,0x00F0,故障注入,fault_mode,u16,RW,1,,0,control,1,见 FaultMode
