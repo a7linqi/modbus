@@ -6,8 +6,9 @@
 
 ## 项目状态
 
-- 状态：未开工
-- 第一里程碑：F103 Modbus RTU 从站 0x03 最小闭环
+- 状态：未开工（文档已按关键约定冻结）
+- 第一里程碑：F103 Modbus RTU 从站 0x03 最小闭环（W1 同步完成 0x04/0x06/0x10）
+- 关键约定：RS485 固定 115200 8N1；4 个逻辑从站（3 业务 + 1 预留）；测量值走 0x04，参数/控制走 0x03
 - 目标：6 周形成可写简历的 MCU MVP，再接入 Linux/LwIP
 
 ## 文档
@@ -27,12 +28,12 @@
 ## 目录规划
 
 ```
-industrial-edge-gateway/
+仓库根目录（当前 /workspace，不再嵌套 industrial-edge-gateway/）
 ├── docs/            # 架构、协议、寄存器表、测试计划
 ├── gateway-f407/    # FreeRTOS 网关固件
 ├── device-f103/     # Modbus RTU 从站固件
 ├── linux-server/    # Linux C epoll 服务
-└── tools/           # Python 模拟器、故障注入、日志分析
+└── tools/           # Python 主站/从站模拟、故障注入、日志分析
 ```
 
 ## 说明
