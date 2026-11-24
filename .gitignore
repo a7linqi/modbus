@@ -1,0 +1,32 @@
+# Build outputs
+build/
+Debug/
+Release/
+*.o
+*.obj
+*.elf
+*.bin
+*.hex
+*.map
+*.list
+*.axf
+*.s19
+
+# Linux
+*.out
+*.log
+*.db
+*.sqlite
+*.sqlite3
+__pycache__/
+*.pyc
+
+# IDE / local
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Python virtual env
+.venv/
+venv/
