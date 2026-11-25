@@ -28,7 +28,7 @@
 | 2 | 若手动：DE 高电平还是低电平发送？（F103 侧） | ⬜ 待填 |
 | 3 | F407 板载 RS485 的 DE 引脚？ | ✅ **PG8**，DE 与 /RE 短接，**高 = 发送、低 = 接收**；USART2 PA2/PA3；P4 跳线拨 RS485 侧（依据 `hardware-f407-v3.md`） |
 
-> 已定默认（可在 `board_config.h` 覆盖）：F103 用 USART2（PA2 TX→DI、PA3 RX←RO），DE/RE→PA1；调试口 USART1（PA9/PA10）。模块必须 3.3V。F103 侧模块型号与 DE 极性仍待确认。
+> 已定默认（可在 `board_config.h` 覆盖）：F103 用 USART2（PA2 TX→DI、PA3 RX←RO），DE/RE→PA8；调试口 USART1（PA9/PA10）。模块必须 3.3V。F103 侧模块型号与 DE 极性仍待确认。
 > F407 端已板载 120Ω 终端，F103 端再加一个 120Ω 即两端齐；短距离桌面可先只保留板载端。
 
 ---
