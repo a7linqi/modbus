@@ -2,17 +2,16 @@
 #define BOARD_CONFIG_H
 
 /*
- * 板级配置：以下为 W1 的占位方案，接线前必须核对实际硬件。
+ * 板级配置（2026-11-25 定稿）：接线以 docs/w1-status.md §1 采购决定为准。
  *
- * 假设：
+ * 定稿依据：
  * - F103C8T6 最小系统板（64KB Flash / 20KB RAM）；
- * - MAX3485/SP3485 3.3V 模块，USART2：TX=PA2，RX=PA3；
- * - DE/RE 由 PA8 控制，高电平发送；
+ * - MAX3485 3.3V 模块（手动 DE/RE 款），USART2：TX=PA2，RX=PA3；
+ * - DE 与 RE 短接后由 PA8 控制，高电平发送（MAX3485 标准行为）；
  * - 调试串口 USART1：PA9/PA10，115200。
  *
  * 如果实际接线不同，只改本文件，不要改 rs485_port.c 的时序。
- * 注意：正点原子探索者 V3 是 F407 板，不含 F103；F103 从站需单独一块
- * C8T6 最小系统板，或用 USB-RS485 + PC 模拟从站先开发主站。
+ * 模块到货后核对：丝印 MAX3485/SP3485，引脚含 DE/RE，VCC 接 3.3V。
  */
 
 #define BOARD_RS485_UART_INDEX 2 /* 1=USART1, 2=USART2, 3=USART3 */
