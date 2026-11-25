@@ -18,7 +18,7 @@
 - [学习框架](docs/learning-framework.md)：每周学习地图与脱稿问题
 - [人机分工](docs/agent-workflow.md)：谁写哪部分、红区、AI 边界
 - [总览图](docs/diagrams.md)：全链路数据流 + 6 周排期（Mermaid）
-- [W1 进度](docs/w1-status.md)：已完成/待办/硬件信息
+- [准备期清单](docs/w1-status.md)：硬件 3 问、准备期状态、W1 移交
 - [AI 交接文档](docs/AI-HANDOFF.md)：冻结约定与详细需求
 
 ## 硬件
