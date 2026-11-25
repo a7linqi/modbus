@@ -19,13 +19,14 @@
 - [人机分工](docs/agent-workflow.md)：谁写哪部分、红区、AI 边界
 - [总览图](docs/diagrams.md)：全链路数据流 + 6 周排期（Mermaid）
 - [准备期清单](docs/w1-status.md)：硬件 3 问、准备期状态、W1 移交
+- [F407 板卡事实](docs/hardware-f407-v3.md)：探索者 V3 引脚、RS485 方向脚、时钟配置（带证据等级）
 - [AI 交接文档](docs/AI-HANDOFF.md)：冻结约定与详细需求
 
 ## 硬件
 
 | 硬件 | 说明 |
 |---|---|
-| STM32F407 探索者 V3 | 板载 YT8512C 以太网 PHY、SP3485 RS485、TJA1050 CAN |
+| STM32F407 探索者 V3 | 板载 YT8512C 以太网 PHY、TPT8485 RS485（USART2 + PG8 方向）、TJA1050 CAN |
 | STM32F103C8T6 最小系统板 | Modbus RTU 从站（64KB Flash / 20KB RAM） |
 | MAX3485/SP3485 3.3V 模块 | F103 侧 RS485 收发器，DE/RE 由 GPIO 控制 |
 | USB-RS485 | PC 调试 / 从站模拟 |
