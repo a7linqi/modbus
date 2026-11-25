@@ -30,6 +30,8 @@
 | STM32F103C8T6 最小系统板 | Modbus RTU 从站（64KB Flash / 20KB RAM） |
 | MAX3485/SP3485 3.3V 模块 | F103 侧 RS485 收发器，DE/RE 由 GPIO 控制 |
 | USB-RS485 | PC 调试 / 从站模拟 |
+| 电位器 | PA0 ADC → Slave 2 电压真实采集 |
+| AHT20 温湿度模块 | I2C1 PB6/PB7 → Slave 1 温度真实采集（压力点保留模拟源） |
 | 120Ω 电阻 | RS485 总线终端 |
 
 > 注意：探索者 V3 是 F407 板，不含 F103；F103 从站需要单独一块 C8T6 最小系统板。
