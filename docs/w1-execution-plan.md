@@ -119,6 +119,7 @@ python master_tester.py --port COMx --slave 1 --function 4 --address 0 --count 4
 - 写 `0x00F0 = 2`（BAD_CRC），确认主站报 CRC 错；
 - 写 `0x00F0 = 3`（DELAY），确认主站超时/重试；
 - 逻辑分析仪看：DE 拉高 → 数据 → TC → DE 拉低；
+- **对照实验**：故意在 DMA 完成回调里立即拉低 DE，用 USB-RS485 抓末字节截断；与正确时序波形各存一张，作为面试证据；
 - 截图保存到 `docs/evidence/w1/`。
 
 ### M7. 记录证据（30 分钟）

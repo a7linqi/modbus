@@ -132,6 +132,7 @@ uint8_t modbus_exception; uint16_t reserved;
 - 升级兼容：v1 内只允许启用 reserved/flags 位，**不允许改字段顺序/宽度**；改布局必须 version=2 且 Linux 双版本解析过渡。
 - Linux 每连接静态接收环 2048B（最大帧 26+1024=1050B），连接池静态 8 槽；半包/粘包状态机：找 magic → 收满 26B → 验 header_crc → 按 length 收 payload → 验 payload_crc → 分发。
 - 命令闭环：Linux 发 COMMAND → F407 写从站 → 收到 0x06/0x10 回显才发 COMMAND_RESPONSE(result=0) 并更新镜像（"确认后更新"语义）。
+- 入库变化阈值（冻结）：模拟量 ±5 raw、电量 ±1、离散量任何变化；与 1s 下限取 AND；详见 AI-HANDOFF §6.7。
 
 ---
 
