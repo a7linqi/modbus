@@ -530,7 +530,7 @@ typedef enum {
 - CRC 统一用 CRC-16/CCITT-FALSE（0x1021，初值 0xFFFF），测试向量 `"123456789"` → 0x29B1；与 Modbus 的 0xA001 实现分开
 - `sequence` 每个连接从 1 开始，用于丢包/重复/乱序检测，回绕按无符号处理
 - 错误 magic、版本不支持、长度超限、CRC 失败一律断开连接并记录
-- `MSG_DEVICE_DATA` 采用批量点位格式（一条消息多个点），具体字段 W5 前写入 `docs/protocol.md`
+- `MSG_DEVICE_DATA` 采用批量点位格式（一条消息多个点）；**全部 payload 格式已于 2026-11-26 冻结于 `docs/gateway-architecture.md` §3**
 - TCP 是字节流，必须处理半包/粘包
 
 ---

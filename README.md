@@ -21,6 +21,8 @@
 - [准备期清单](docs/w1-status.md)：硬件 3 问、准备期状态、W1 移交
 - [F407 板卡事实](docs/hardware-f407-v3.md)：探索者 V3 引脚、RS485 方向脚、时钟配置（带证据等级）
 - [AI 交接文档](docs/AI-HANDOFF.md)：冻结约定与详细需求
+- [网关架构设计](docs/gateway-architecture.md)：F407 任务/栈/队列/ISR 边界、三端一致性契约、里程碑门禁
+- [任务单 W2–W6](docs/task-tickets.md)：允许/禁止修改文件、边界条件、验收定义
 
 ## 硬件
 
